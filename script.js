@@ -1,15 +1,21 @@
-const nota1 = document.getElementById("numero1")
-const nota2 = document.getElementById("numero2")
+alert ("´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´")
 
-const button = document.getElementById("botao")
+const number1 = document.getElementById("nota1")
+const number2 = document.getElementById("nota2")
 
-function CalcularMedia(){
+const resultado = document.getElementById("resultado")
+
+const button = document.getElementById("button")
+
+function calcularMedia(){
+  
     const valorNota1 = Number(nota1.value)
     const valorNota2 = Number(nota2.value)
-    
-    const media = (valorNota1 + valorNota2)/2
-    
-    console.log(media)
+
+const media = (valorNota1 + valorNota2)/2
+
+resultado.innerText = `a média é ${media.toFixed(2)}`
 }
 
-button.addEventListener("click", CalcularMedia)
+
+button.addEventListener("click", calcularMedia)
